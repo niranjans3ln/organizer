@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.ApplicationId=53aa3a614382ec72c3000143
+org.jboss.tools.openshift.ApplicationName=organizer
+org.jboss.tools.openshift.Connection=https\://niranjans3ln%40yahoo.co.in@
+org.jboss.tools.openshift.DeployFolder=webapps
+org.jboss.tools.openshift.Domain=bs5lnd
+org.jboss.tools.openshift.RemoteName=origin

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://bs5lnd.org/wsdl" targetNamespace="http://bs5lnd.org/wsdl" version="1.0">
+<xs:element name="validateLogin" type="tns:validateLogin"/>
+<xs:element name="validateLoginResponse" type="tns:validateLoginResponse"/>
+<xs:complexType name="validateLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="validateLoginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

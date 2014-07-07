@@ -1,0 +1,63 @@
+Your account number is: 63231
+
+Your new database is now ready to use.
+
+To connect to your database use these details
+Host: sql4.freemysqlhosting.net
+Database name: sql445652
+Database user: sql445652
+Database password: zI8*sA2%
+Port number: 3306
+
+
+
+
+
+==========================
+
+
+
+db4free.net
+
+host: db4free.net
+db name: bs5lnd
+user id: bs5lnd
+password: superman
+port no: 3306
+
+
+
+
+
+
+CREATE TABLE `tbl_login` (
+  `login_slno` int(11) NOT NULL AUTO_INCREMENT,
+  `login_id` varchar(45) NOT NULL,
+  `login_password` varchar(45) NOT NULL,
+  `login_aliasname` varchar(45) NOT NULL,
+  `login_name` varchar(45) NOT NULL,
+  `login_secretquestion` varchar(45) NOT NULL,
+  `login_secretanswer` varchar(45) NOT NULL,
+  `login_dob` varchar(10) NOT NULL,
+  `login_doj` varchar(10) NOT NULL,
+  `login_address` varchar(90) NOT NULL,
+  `login_city` varchar(45) NOT NULL,
+  `login_province` varchar(45) NOT NULL,
+  `login_zip` varchar(10) NOT NULL,
+  `login_country_code` varchar(2) NOT NULL,
+  `login_phone_no` varchar(15) NOT NULL,
+  `login_email` varchar(45) NOT NULL,
+  `login_date_format` varchar(10) NOT NULL DEFAULT "DD-MM-YYYY",
+  `login_currency_code` varchar(3) NOT NULL,
+  `login_language` varchar(18) NOT NULL DEFAULT"ENGLISH",
+  `login_highest_education` varchar(45) NOT NULL,
+  `login_industry` varchar(45) NOT NULL,
+  `login_job_role` varchar(45) NOT NULL,
+  `login_company_name` varchar(45) NOT NULL,
+  `login_enable_mail_communication` char(1) NOT NULL DEFAULT 'Y',
+  `login_horoscope_sign` varchar(18),
+  `login_secretcode` varchar(10) NOT NULL,
+  `login_isactive` char(1) NOT NULL DEFAULT 'N',
+  PRIMARY KEY (`login_slno`),
+  UNIQUE KEY `login_id_UNIQUE` (`login_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Primary Login Table which contains all the details including user profile.';
