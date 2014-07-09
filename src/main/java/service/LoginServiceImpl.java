@@ -42,4 +42,10 @@ public class LoginServiceImpl implements LoginService {
 		loginDAO.deleteLogin(login);
 	}
 
+	//@Override
+		@Transactional
+		public boolean activateUser(Login login) {
+			// TODO Auto-generated method stub
+			return loginDAO.activateUser(login);
+		}
 }

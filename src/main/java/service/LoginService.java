@@ -9,4 +9,5 @@ public interface LoginService {
 	Login findLoginById(String id);
 	void updateLogin(Login login);
 	void deleteLogin(Login login);
+	boolean activateUser(Login login);
 }

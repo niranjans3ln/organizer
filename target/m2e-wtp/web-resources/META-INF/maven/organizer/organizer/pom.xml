@@ -81,6 +81,51 @@
 			<artifactId>spring-web</artifactId>
 			<version>3.2.3.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bs5lnd</groupId>
+			<artifactId>date4j</artifactId>
+			<version>5.5.5</version>
+		</dependency>
+		<!-- dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha-all</artifactId>
+			<version>1.0-RC6</version>
+		</dependency-->
+		<!--dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha-integration-simple-servlet</artifactId>
+			<version>2.0-alpha-1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>filters</artifactId>
+			<version>2.0.235</version>
+		</dependency>
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha</artifactId>
+			<version>2.0-alpha-1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha-api</artifactId>
+			<version>1.0</version>
+		</dependency-->
+		<dependency>
+			<groupId>com.simplecaptcha</groupId>
+			<artifactId>simplecaptcha</artifactId>
+			<version>1.2.1</version>
+		</dependency>
 	</dependencies>
 	<profiles>
 		<profile>

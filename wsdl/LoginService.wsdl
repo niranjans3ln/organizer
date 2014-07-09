@@ -13,11 +13,25 @@
     <wsdl:part name="parameters" element="tns:validateLoginResponse">
     </wsdl:part>
   </wsdl:message>
+  <wsdl:message name="activateUserResponse">
+    <wsdl:part name="parameters" element="tns:activateUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="activateUser">
+    <wsdl:part name="parameters" element="tns:activateUser">
+    </wsdl:part>
+  </wsdl:message>
   <wsdl:portType name="LoginServiceEndpoint">
     <wsdl:operation name="validateLogin">
       <wsdl:input name="validateLogin" message="tns:validateLogin">
     </wsdl:input>
       <wsdl:output name="validateLoginResponse" message="tns:validateLoginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateUser">
+      <wsdl:input name="activateUser" message="tns:activateUser">
+    </wsdl:input>
+      <wsdl:output name="activateUserResponse" message="tns:activateUserResponse">
     </wsdl:output>
     </wsdl:operation>
   </wsdl:portType>
@@ -29,6 +43,15 @@
         <soap:body use="literal"/>
       </wsdl:input>
       <wsdl:output name="validateLoginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="activateUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="activateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="activateUserResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>

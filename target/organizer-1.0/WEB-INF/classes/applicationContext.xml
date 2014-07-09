@@ -12,6 +12,13 @@
    
  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+    
+    <!-- LOCALHOST MySQL Server Configuration -->
+    <!--property name="url" value="jdbc:mysql://localhost:3306/bs5lnd" />
+    <property name="username" value="bs5lnd" />
+    <property name="password" value="bs5lnd" /-->
+    
+    <!-- DB4FREE Cloud MySQL Server Configuration -->
     <property name="url" value="jdbc:mysql://db4free.net:3306/bs5lnd" />
     <property name="username" value="bs5lnd" />
     <property name="password" value="superman" />

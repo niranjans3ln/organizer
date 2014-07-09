@@ -28,6 +28,18 @@ public class LoginDAOImpl  implements LoginDAO{
 	}
 	
 	//@Override
+	public boolean activateUser(Login login){
+		String activationCode = login.getLogin_secretcode();
+		login = findLoginById(login.getLogin_id());
+		if(activationCode.equals(login.getLogin_secretcode())){
+			login.setLogin_isactive("Y");
+			sessionFactory.getCurrentSession().update(login);
+			return true;
+		}else
+			return false;
+	}
+	
+	//@Override
 	public void deleteLogin(Login login){
 		sessionFactory.getCurrentSession().delete(login);
 	}

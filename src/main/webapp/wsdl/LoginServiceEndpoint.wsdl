@@ -19,12 +19,43 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="activateUser">
+    <complexType>
+     <sequence>
+      <element name="userid" type="xsd:string"/>
+      <element name="secretcode" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="activateUserResponse">
+    <complexType>
+     <sequence>
+      <element name="activateUserReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
   </schema>
  </wsdl:types>
+
+   <wsdl:message name="activateUserResponse">
+
+      <wsdl:part element="impl:activateUserResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
 
    <wsdl:message name="validateLoginRequest">
 
       <wsdl:part element="impl:validateLogin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="activateUserRequest">
+
+      <wsdl:part element="impl:activateUser" name="parameters">
 
       </wsdl:part>
 
@@ -52,6 +83,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="activateUser">
+
+         <wsdl:input message="impl:activateUserRequest" name="activateUserRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:activateUserResponse" name="activateUserResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
    </wsdl:portType>
 
    <wsdl:binding name="LoginServiceEndpointSoapBinding" type="impl:LoginServiceEndpoint">
@@ -69,6 +112,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="validateLoginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="activateUser">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="activateUserRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="activateUserResponse">
 
             <wsdlsoap:body use="literal"/>
 

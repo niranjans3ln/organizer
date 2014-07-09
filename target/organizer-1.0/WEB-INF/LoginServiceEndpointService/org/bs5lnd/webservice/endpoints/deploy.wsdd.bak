@@ -24,7 +24,11 @@
         <parameter qname="pns:userid" xmlns:pns="http://endpoints.webservice.bs5lnd.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:password" xmlns:pns="http://endpoints.webservice.bs5lnd.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <parameter name="allowedMethods" value="validateLogin"/>
+      <operation name="activateUser" qname="operNS:activateUser" xmlns:operNS="http://endpoints.webservice.bs5lnd.org" returnQName="retNS:activateUserReturn" xmlns:retNS="http://endpoints.webservice.bs5lnd.org" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userid" xmlns:pns="http://endpoints.webservice.bs5lnd.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:secretcode" xmlns:pns="http://endpoints.webservice.bs5lnd.org" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="activateUser validateLogin"/>
 
   </service>
 </deployment>

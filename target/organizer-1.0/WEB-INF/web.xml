@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false" version="3.0">
   <welcome-file-list>
-    <welcome-file>/index.html</welcome-file>
+    <welcome-file>/index.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <display-name>LoginServiceEndpoint</display-name>
-    <servlet-name>LoginServiceEndpoint</servlet-name>
-    <servlet-class>org.bs5lnd.webservice.endpoints.LoginServiceEndpoint</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>LoginServiceEndpoint</servlet-name>
-    <url-pattern>/LoginServiceEndpoint</url-pattern>
-  </servlet-mapping>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/errorPage.jsp</location>
+  </error-page>
   <servlet>
     <display-name>Apache-Axis Servlet</display-name>
     <servlet-name>AxisServlet</servlet-name>
@@ -38,5 +33,62 @@
   <servlet-mapping>
     <servlet-name>AdminServlet</servlet-name>
     <url-pattern>/servlet/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>org.bs5lnd.servlets.UserRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>jcaptcha</servlet-name>
+    <servlet-class>com.octo.captcha.module.servlet.image.SimpleImageCaptchaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jcaptcha</servlet-name>
+    <url-pattern>/jcaptcha.jpg</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StickyCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.StickyCaptchaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StickyCaptcha</servlet-name>
+    <url-pattern>/stickyCaptcha.png</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AudioCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.AudioCaptchaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AudioCaptcha</servlet-name>
+    <url-pattern>/audio.wav</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SimpleCaptcha</servlet-name>
+    <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+    <init-param>
+      <param-name>captcha-width</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <param-name>captcha-height</param-name>
+      <param-value>50</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SimpleCaptcha</servlet-name>
+    <url-pattern>/simpleCaptcha.png</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>LoginServiceEndpoint</display-name>
+    <servlet-name>LoginServiceEndpoint</servlet-name>
+    <servlet-class>org.bs5lnd.webservice.endpoints.LoginServiceEndpoint</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServiceEndpoint</servlet-name>
+    <url-pattern>/LoginServiceEndpoint</url-pattern>
   </servlet-mapping>
 </web-app>
